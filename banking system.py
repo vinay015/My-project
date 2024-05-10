@@ -1,17 +1,17 @@
 # parents class
 class user:
-    def __init__(self, name, gender, age, branch_adresss):
+    def __init__(self, name, gender, age, branch_addresss):
         self.name = name
         self.gender = gender
         self.age = age
-        self.branch_adress = branch_adresss
+        self.branch_adress = branch_addresss
 
     def show_details(self):
-        print("personal details:")
-        print("name  ", self.name)
-        print("gender", self.gender)
-        print("age   ", self.age)
-        print("branch address\t", self.branch_adress)
+        print("Personal Details :")
+        print("Name :-  ", self.name)
+        print("Gender :-", self.gender)
+        print("Age :-", self.age)
+        print("Branch address\t", self.branch_address)
 
 
 # child class
@@ -23,22 +23,22 @@ class bank(user):
     def deposit(self, amount):
         self.amount = amount
         self.balance = self.balance + self.amount
-        print("amount amount updated is rupee is :", self.balance)
+        print("Amount updated is rupee is ₹:", self.balance)
 
     def withdraw(self, amount):
         self.amount = amount
         if self.amount > self.balance:
-            print("insufficient balance is rupee:", self.balance)
+            print("Insufficient balance is rupee ₹:", self.balance)
         else:
             self.balance = self.balance - self.amount
-            print("balance updated is rupee: ", self.balance)
+            print("Balance updated is rupee: ", self.balance)
 
     def view_balance(self):
         self.show_details()
-        print("account remaining balance is rupee :", self.balance)
+        print("Account remaining balance is rupee ₹:", self.balance)
 
 
-user_name = bank("Modi", "male", 70, "Gujarat")
+user_name = bank("Modi", "Male", 70, "Gujarat")
 user_name.show_details()
 user_name.deposit(2000)
 user_name.withdraw(1000)
